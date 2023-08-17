@@ -10,7 +10,6 @@ using namespace std;
 class AdresatMeneger
 {
     int idZalogowanegoUzytkownika;
-    int idOstatniegoAdresata = 0;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
     void dopiszAdresataDoPliku(Adresat adresat);
