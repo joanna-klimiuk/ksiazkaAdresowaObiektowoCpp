@@ -15,17 +15,13 @@ int AdresatMeneger::dodajAdresata()
 
     adresaci.push_back(adresat);
     dopiszAdresataDoPliku(adresat);
-
-    return idOstatniegoAdresata;
 }
 
 Adresat AdresatMeneger::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    idOstatniegoAdresata++;
-
-    adresat.ustawId(idOstatniegoAdresata);
+    adresat.ustawId(plikZAdresatami.powiekszOJedenIPobierzIdOstatniegoAdresata());
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
 
     cout << "Podaj imie: ";
@@ -90,6 +86,5 @@ void AdresatMeneger::wyswietlDaneAdresata(Adresat adresat)
 void AdresatMeneger::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-    idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
 

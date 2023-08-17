@@ -12,7 +12,7 @@ int main()
  //   ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
  //   ksiazkaAdresowa.wylogujUzytkownika();
     ksiazkaAdresowa.logowanieUzytkownika();
- //   ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.dodajAdresata();
     ksiazkaAdresowa.dodajAdresata();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 

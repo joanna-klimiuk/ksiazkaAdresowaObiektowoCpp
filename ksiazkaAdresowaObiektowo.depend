@@ -73,3 +73,77 @@
 	"PlikZAdresatami.h"
 	"UzytkownikMeneger.h"
 
+1691867828 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\adresat.cpp
+	"Adresat.h"
+
+1691867828 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\adresat.h
+	<iostream>
+
+1691867828 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\ksiazkaadresowa.cpp
+	"KsiazkaAdresowa.h"
+
+1691867828 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\ksiazkaadresowa.h
+	<iostream>
+	"UzytkownikMeneger.h"
+	"AdresatMeneger.h"
+
+1691867828 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\uzytkownikmeneger.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"PlikZUzytkownikami.h"
+
+1691867828 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\plikzuzytkownikami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"MetodyPomocnicze.h"
+	"Uzytkownik.h"
+
+1691867828 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\metodypomocnicze.h
+	<iostream>
+	<sstream>
+
+1691867828 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\uzytkownik.h
+	<iostream>
+
+1692266021 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\adresatmeneger.h
+	<windows.h>
+	<fstream>
+	<sstream>
+	"PlikZAdresatami.h"
+	"UzytkownikMeneger.h"
+
+1692266942 d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\plikzadresatami.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"MetodyPomocnicze.h"
+	"Adresat.h"
+
+1692266570 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\main.cpp
+	<iostream>
+	"ksiazkaAdresowa.h"
+
+1691867828 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\metodypomocnicze.cpp
+	"MetodyPomocnicze.h"
+
+1692266942 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\plikzadresatami.cpp
+	"PlikZAdresatami.h"
+
+1691867828 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1691867828 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1691867828 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\uzytkownikmeneger.cpp
+	"UzytkownikMeneger.h"
+
+1692266942 source:d:\nauka_programowania2\seminarium16_ksiazka_adresowa_obiektowo1\ksiazkaadresowaobiektowo\ksiazkaadresowaobiektowocpp\adresatmeneger.cpp
+	"AdresatMeneger.h"
+
