@@ -12,7 +12,6 @@ class AdresatMeneger
     int idZalogowanegoUzytkownika;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
-    void dopiszAdresataDoPliku(Adresat adresat);
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
 
