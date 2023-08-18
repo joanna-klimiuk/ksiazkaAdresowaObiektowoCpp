@@ -151,7 +151,6 @@ nazwaPlikuZAdresatami: string
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(): Integer
 - pobierzDaneAdresata: Adresat
 + wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
-+ dopiszAdresataDoPliku(): void
 + pobierzIdOstatniegoAdresata(): Integer</panel_attributes>
     <additional_attributes/>
   </element>

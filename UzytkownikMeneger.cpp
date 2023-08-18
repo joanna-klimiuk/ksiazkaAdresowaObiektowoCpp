@@ -11,49 +11,6 @@ void UzytkownikMeneger::rejestracjaUzytkownika()
     system("pause");
 }
 
-Uzytkownik UzytkownikMeneger::podajDaneNowegoUzytkownika()
-{
-    Uzytkownik uzytkownik;
-
-    uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
-
-    string login;
-    do
-    {
-        cout << "Podaj login: ";
-        cin >> login;
-        uzytkownik.ustawLogin(login);
-    } while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
-
-    string haslo;
-    cout << "Podaj haslo: ";
-    cin >> haslo;
-    uzytkownik.ustawHaslo(haslo);
-
-    return uzytkownik;
-}
-
-int UzytkownikMeneger::pobierzIdNowegoUzytkownika()
-{
-    if (uzytkownicy.empty())
-        return 1;
-    else
-        return uzytkownicy.back().pobierzId() + 1;
-}
-
-bool UzytkownikMeneger::czyIstniejeLogin(string login)
-{
-    for (size_t i = 0; i < uzytkownicy.size(); i++)
-    {
-        if (uzytkownicy[i].pobierzLogin() == login)
-        {
-            cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
-            return true;
-        }
-    }
-    return false;
-}
-
 void UzytkownikMeneger::wypiszWszystkichUzytkownikow()
 {
     for (auto uzytkownik : uzytkownicy)
@@ -138,4 +95,47 @@ void UzytkownikMeneger::wylogujUzytkownika()
 int UzytkownikMeneger::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
+}
+
+Uzytkownik UzytkownikMeneger::podajDaneNowegoUzytkownika()
+{
+    Uzytkownik uzytkownik;
+
+    uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
+
+    string login;
+    do
+    {
+        cout << "Podaj login: ";
+        cin >> login;
+        uzytkownik.ustawLogin(login);
+    } while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
+
+    string haslo;
+    cout << "Podaj haslo: ";
+    cin >> haslo;
+    uzytkownik.ustawHaslo(haslo);
+
+    return uzytkownik;
+}
+
+int UzytkownikMeneger::pobierzIdNowegoUzytkownika()
+{
+    if (uzytkownicy.empty())
+        return 1;
+    else
+        return uzytkownicy.back().pobierzId() + 1;
+}
+
+bool UzytkownikMeneger::czyIstniejeLogin(string login)
+{
+    for (size_t i = 0; i < uzytkownicy.size(); i++)
+    {
+        if (uzytkownicy[i].pobierzLogin() == login)
+        {
+            cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
+            return true;
+        }
+    }
+    return false;
 }

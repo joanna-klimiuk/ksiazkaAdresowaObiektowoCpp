@@ -3,3 +3,6 @@ plan/
 *.cbp
 bin/
 Uzytkownicy.txt
+Adresaci.txt
+*.depend
+*.layout

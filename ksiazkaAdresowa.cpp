@@ -6,16 +6,16 @@ void KsiazkaAdresowa::rejestracjaUzytkownika()
     uzytkownikMeneger.rejestracjaUzytkownika();
 }
 
-void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
-{
-    uzytkownikMeneger.wypiszWszystkichUzytkownikow();
-}
-
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMeneger.logowanieUzytkownika();
     adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
     adresatMeneger.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+}
+
+void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
+{
+    uzytkownikMeneger.wypiszWszystkichUzytkownikow();
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
