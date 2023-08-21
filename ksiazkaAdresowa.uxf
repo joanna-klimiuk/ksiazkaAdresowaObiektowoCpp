@@ -38,6 +38,8 @@
 + wylogujUzytkownika(): void
 + dodajAdresata(): void
 + wyswietlWszystkichAdresatow(): void
++ czyUzytkownikJestZalogowany(): bool
++ opcjeMenu(): void
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -100,9 +102,12 @@ nazwaPlikuZUzytkownikami: String
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
-konwerjsaIntNaString(): string
-konwersjaStringNaInt(): Integer
-wczytajLinie(): string</panel_attributes>
++konwerjsaIntNaString(): string
++konwersjaStringNaInt(): Integer
++wczytajLinie(): string
++wczytajZnak(): char
++wybierzOpcjeZMenuGlownego(): char
++wybierzOpcjeZMenuUzytkownika(): char</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -125,10 +130,7 @@ wczytajLinie(): string</panel_attributes>
 - podajDaneNowegoAdresata(): Adresat
 - wyswietlDaneAdresata(): void
 + dodajAdresata ()
-+ wyswietlWszystkichAdresatow (): void
-+ ustawIdZalogowanegoUzytkownika(): void
-+ wyczyscWektorAdresatow(): void
-+ wczytajAdresatowZalogowanegoUzytkownikaZPliku(): void</panel_attributes>
++ wyswietlWszystkichAdresatow (): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
