@@ -19,11 +19,6 @@ void UzytkownikMeneger::wypiszWszystkichUzytkownikow()
     }
 }
 
-void UzytkownikMeneger::wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 void UzytkownikMeneger::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
@@ -139,3 +134,12 @@ bool UzytkownikMeneger::czyIstniejeLogin(string login)
     }
     return false;
 }
+
+ bool UzytkownikMeneger::czyUzytkownikJestZalogowany()
+ {
+     if (idZalogowanegoUzytkownika > 0)
+        return true;
+
+     else
+        return false;
+ }

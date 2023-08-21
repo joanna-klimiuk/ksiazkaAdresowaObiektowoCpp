@@ -33,27 +33,12 @@ void AdresatMeneger::wyswietlWszystkichAdresatow()
     system("pause");
 }
 
-void AdresatMeneger::ustawIdZalogowanegoUzytkownika(int idUzytkownika)
-{
-    idZalogowanegoUzytkownika = idUzytkownika;
-}
-
-void AdresatMeneger::wyczyscWektorAdresatow()
-{
-    adresaci.clear();
-}
-
-void AdresatMeneger::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
-{
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
-}
-
 Adresat AdresatMeneger::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
     adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());

@@ -64,7 +64,7 @@
 + zmianaHasla (): string
 + wylogowanieUzytkownika (): Integer
 + wypiszWszystkichUzytkownikow(): void
-+ wczytajUzytkownikowZPliku(): void
++ czyUzytkownikJestZalogowany(): bool
 </panel_attributes>
     <additional_attributes/>
   </element>

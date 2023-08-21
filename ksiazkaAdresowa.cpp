@@ -9,8 +9,11 @@ void KsiazkaAdresowa::rejestracjaUzytkownika()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMeneger.logowanieUzytkownika();
-    adresatMeneger.ustawIdZalogowanegoUzytkownika(uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
-    adresatMeneger.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+
+    if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+    {
+        adresatMeneger = new AdresatMeneger(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMeneger.pobierzIdZalogowanegoUzytkownika());
+    }
 }
 
 void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
@@ -26,16 +29,23 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 void KsiazkaAdresowa::wylogujUzytkownika()
 {
     uzytkownikMeneger.wylogujUzytkownika();
-    adresatMeneger.wyczyscWektorAdresatow();
+    delete adresatMeneger;
+    adresatMeneger = NULL;
 }
 
 void KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMeneger.dodajAdresata();
+    if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+    {
+        adresatMeneger -> dodajAdresata();
+    }
 }
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
-    adresatMeneger.wyswietlWszystkichAdresatow();
+     if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+    {
+        adresatMeneger -> wyswietlWszystkichAdresatow();
+    }
 }
 
