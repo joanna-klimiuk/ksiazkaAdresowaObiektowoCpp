@@ -11,7 +11,10 @@ class MetodyPomocnicze
 public:
     static string konwerjsaIntNaString(int liczba);
     static string wczytajLinie();
+    static char wczytajZnak();
     static int konwersjaStringNaInt(string liczba);
+    static char wybierzOpcjeZMenuGlownego();
+    static char wybierzOpcjeZMenuUzytkownika();
 };
 
 #endif

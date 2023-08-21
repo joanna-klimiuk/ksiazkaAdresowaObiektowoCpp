@@ -32,4 +32,6 @@ public:
     void wylogujUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    bool czyUzytkownikJestZalogowany();
+    void opcjeMenu();
 };
