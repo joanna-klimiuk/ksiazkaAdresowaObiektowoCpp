@@ -35,6 +35,8 @@ public:
     int pobierzIdOstatniegoAdresata();
     void usunWybranaLinieWPliku(int idAdresata);
     void ustawIdOstatniegoAdresata(int noweId);
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void edytujWybranaLinieWPliku(Adresat adresat);
 };
 
 #endif
