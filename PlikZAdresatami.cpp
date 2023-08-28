@@ -164,3 +164,54 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
     }
     return adresat;
 }
+
+void PlikZAdresatami::usunWybranaLinieWPliku(int idAdresata)
+{
+    bool czyIstniejeAdresat = false;
+    int numerLiniiWPlikuTekstowym = 1;
+    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
+    string wczytanaLinia = "";
+    int idAdresataZPierwszejLinii = 0;
+    string nazwaTymczasowegoPlikuZAdresatami = "adresaci_tymczasowo.txt";
+
+    odczytywanyPlikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
+    tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);
+
+    if (odczytywanyPlikTekstowy.good() == true && idAdresata != 0)
+    {
+        while(getline(odczytywanyPlikTekstowy, wczytanaLinia))
+        {
+            if(idAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia) && numerLiniiWPlikuTekstowym == 1)
+            {
+                idAdresataZPierwszejLinii = idAdresata;
+            }
+
+            else if(idAdresata == idAdresataZPierwszejLinii && numerLiniiWPlikuTekstowym == 2)
+            {
+                tymczasowyPlikTekstowy << wczytanaLinia;
+            }
+
+            else if(idAdresata != pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia) && numerLiniiWPlikuTekstowym == 1)
+            {
+                tymczasowyPlikTekstowy << wczytanaLinia;
+            }
+
+            else if(idAdresata != pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+            {
+                tymczasowyPlikTekstowy << endl << wczytanaLinia;
+            }
+            numerLiniiWPlikuTekstowym++;
+        }
+    }
+
+        odczytywanyPlikTekstowy.close();
+        tymczasowyPlikTekstowy.close();
+
+        remove(NAZWA_PLIKU_Z_ADRESATAMI.c_str());
+        rename(nazwaTymczasowegoPlikuZAdresatami.c_str(), NAZWA_PLIKU_Z_ADRESATAMI.c_str());
+}
+
+void PlikZAdresatami::ustawIdOstatniegoAdresata(int noweId)
+{
+    idOstatniegoAdresata = noweId;
+}

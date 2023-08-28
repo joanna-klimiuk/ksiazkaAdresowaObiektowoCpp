@@ -99,3 +99,11 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     return wybor;
 }
 
+void KsiazkaAdresowa::usunAdresata()
+{
+    if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+    {
+        adresatMeneger -> usunAdresata();
+    }
+}
+
