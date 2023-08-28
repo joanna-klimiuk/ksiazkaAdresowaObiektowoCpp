@@ -107,3 +107,11 @@ void KsiazkaAdresowa::usunAdresata()
     }
 }
 
+void KsiazkaAdresowa::edytujAdresata()
+{
+     if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+    {
+        adresatMeneger -> edytujAdresata();
+    }
+}
+

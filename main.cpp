@@ -57,9 +57,9 @@ int main()
             case '5':
                 ksiazkaAdresowa.usunAdresata();
                 break;
-    /*        case '6':
-                edytujAdresata(adresaci);
-                break; */
+                case '6':
+                ksiazkaAdresowa.edytujAdresata();
+                break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
@@ -69,7 +69,6 @@ int main()
             }
         }
     }
-
 
     return 0;
 }
