@@ -129,7 +129,6 @@ void AdresatMeneger::edytujAdresata()
 {
     system("cls");
     int idEdytowanegoAdresata = 0;
-    int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
     string noweDane;
     char wybor;
@@ -138,7 +137,7 @@ void AdresatMeneger::edytujAdresata()
     cout << ">>> EDYCJA WYBRANEGO ADRESATA <<<" << endl << endl;
     idEdytowanegoAdresata = podajIdWybranegoAdresata();
 
-    for (int i = 0; i < adresaci.size(); i++)
+    for (size_t i = 0; i < adresaci.size(); i++)
     {
         if (adresaci[i].pobierzId() == idEdytowanegoAdresata)
         {
