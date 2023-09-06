@@ -92,6 +92,15 @@ int UzytkownikMeneger::pobierzIdZalogowanegoUzytkownika()
     return idZalogowanegoUzytkownika;
 }
 
+ bool UzytkownikMeneger::czyUzytkownikJestZalogowany()
+ {
+     if (idZalogowanegoUzytkownika > 0)
+        return true;
+
+     else
+        return false;
+ }
+
 Uzytkownik UzytkownikMeneger::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
@@ -134,12 +143,3 @@ bool UzytkownikMeneger::czyIstniejeLogin(string login)
     }
     return false;
 }
-
- bool UzytkownikMeneger::czyUzytkownikJestZalogowany()
- {
-     if (idZalogowanegoUzytkownika > 0)
-        return true;
-
-     else
-        return false;
- }

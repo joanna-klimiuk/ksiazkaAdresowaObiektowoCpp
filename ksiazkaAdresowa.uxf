@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>9</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>396</y>
-      <w>171</w>
-      <h>90</h>
+      <x>0</x>
+      <y>390</y>
+      <w>190</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>Uzytkownik
 --
@@ -20,15 +20,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>459</x>
-      <y>36</y>
-      <w>306</w>
-      <h>288</h>
+      <x>660</x>
+      <y>0</y>
+      <w>340</w>
+      <h>300</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
 - uzytkownikMeneger: UzytkownikMeneger
 - adresatMeneger: AdresatMeneger
+- NAZWA_PLIKU_Z_ADRESATAMI: const string
 --
 &lt;&lt;constructor&gt;&gt; KsiazkaAdresowa()
 + rejestracjaUzytkownika(): void
@@ -39,17 +40,20 @@
 + dodajAdresata(): void
 + wyswietlWszystkichAdresatow(): void
 + czyUzytkownikJestZalogowany(): bool
-+ opcjeMenu(): void
++ wybierzOpcjeZMenuGlownego(): char
++ wybierzOpcjeZMenuUzytkownika(): char
++ usunAdresata(): void
++ edytujAdresata():void
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>108</x>
-      <y>153</y>
-      <w>342</w>
-      <h>225</h>
+      <x>270</x>
+      <y>120</y>
+      <w>380</w>
+      <h>250</h>
     </coordinates>
     <panel_attributes>UzytkownikMeneger
 --
@@ -62,9 +66,9 @@
 - pobierzIdNowegoUzytkownika(): Integer
 - czyIstniejeLogin(string login): bool
 + rejestracjaUzytkownika (): void
-+ logowanieUzytkownika (): Integer
-+ zmianaHasla (): string
-+ wylogowanieUzytkownika (): Integer
++ logowanieUzytkownika (): void
++ zmianaHaslaZalogowanegoUzytkownika (): void
++ wylogujUzytkownika (): void
 + wypiszWszystkichUzytkownikow(): void
 + czyUzytkownikJestZalogowany(): bool
 </panel_attributes>
@@ -73,18 +77,15 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
-      <y>396</y>
-      <w>342</w>
-      <h>180</h>
+      <x>200</x>
+      <y>390</y>
+      <w>380</w>
+      <h>200</h>
     </coordinates>
-    <panel_attributes>PlikZUytkownikami
---
-nazwaPlikuZUzytkownikami: String
+    <panel_attributes>PlikZUytkownikami :public PlikTekstowy
 --
 &lt;&lt;constructor&gt;&gt; PlikZUzytkownikami()
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami
-- czyPlikJestPusty(): bool
 + pobierzDaneUzytkownika() : Uzytkownik
 + dopiszUzytkownikaDoPliku(): void
 + wczytajUzytkownikowZPliku(): void
@@ -95,74 +96,80 @@ nazwaPlikuZUzytkownikami: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>459</x>
-      <y>594</y>
-      <w>243</w>
-      <h>126</h>
+      <x>630</x>
+      <y>640</y>
+      <w>320</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
-+konwerjsaIntNaString(): string
-+konwersjaStringNaInt(): Integer
-+wczytajLinie(): string
-+wczytajZnak(): char
-+wybierzOpcjeZMenuGlownego(): char
-+wybierzOpcjeZMenuUzytkownika(): char</panel_attributes>
++ konwerjsaIntNaString(): string
++ konwersjaStringNaInt(): Integer
++ wczytajLinie(): string
++ wczytajZnak(): char
++ wczytajLiczbeCalkowita(): Integer
++ pobierzLiczbe(): string
++ zamienPierwszaLitereNaDuzaAPozostaleNaMale(): string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>774</x>
-      <y>153</y>
-      <w>324</w>
-      <h>225</h>
+      <x>1010</x>
+      <y>120</y>
+      <w>360</w>
+      <h>250</h>
     </coordinates>
     <panel_attributes>AdresatMeneger
 --
-- idZalogowanegoUzytkownika: Integer
-- idOstatniegoAdresata: Integer
+- ID_ZALOGOWANEGO_UZYTKOWNIKA: const Integer
 - adresaci: vector &lt;Adresat&gt;
 - plikZAdresatami: PlikZAdresatami
 --
 &lt;&lt;constructor&gt;&gt; AdresatMeneger()
-- dopiszAdresataDoPliku(): void
 - podajDaneNowegoAdresata(): Adresat
 - wyswietlDaneAdresata(): void
-+ dodajAdresata ()
-+ wyswietlWszystkichAdresatow (): void</panel_attributes>
+- podajIdWybranegoAdresata(): Integer
+- wybierzOpcjeZMenuEdycja(): char
++ dodajAdresata (): void
++ wyswietlWszystkichAdresatow (): void
++ usunAdresata(): void
++ edytujAdresata(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>756</x>
-      <y>396</y>
-      <w>378</w>
-      <h>216</h>
+      <x>990</x>
+      <y>390</y>
+      <w>420</w>
+      <h>240</h>
     </coordinates>
-    <panel_attributes>PlikZAdresatami
+    <panel_attributes>PlikZAdresatami :public PlikTekstowy
 --
-nazwaPlikuZAdresatami: string
+- idOstatniegoAdresata: Integer
 --
 &lt;&lt;constructor&gt;&gt; PlikZAdresatami()
-- czyPlikJestPusty(): bool
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami: string
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(): Integer
 - pobierzLiczbe(): string
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(): Integer
 - pobierzDaneAdresata: Adresat
 + wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
-+ pobierzIdOstatniegoAdresata(): Integer</panel_attributes>
++ dopiszAdresataDoPliku(): void
++ pobierzIdOstatniegoAdresata(): Integer
++ usunWybranaLinieWPliku(): void
++ zaktualizujDaneWybranegoAdresata(): void
++ edytujWybranaLinieWPliku(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>603</x>
-      <y>396</y>
-      <w>153</w>
-      <h>135</h>
+      <x>1420</x>
+      <y>390</y>
+      <w>170</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Adresat
 --
@@ -173,6 +180,23 @@ nazwaPlikuZAdresatami: string
 -numerTelefonu: string
 - email: string
 - adres: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>390</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>PlikTekstowy
+--
+NAZWA_PLIKU: const string
+--
++ &lt;&lt;constructor&gt;&gt; PlikTekstowy()
+czyPlikJestPusty(): bool
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

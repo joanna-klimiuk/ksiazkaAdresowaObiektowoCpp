@@ -12,6 +12,7 @@ class AdresatMeneger
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     int podajIdWybranegoAdresata();

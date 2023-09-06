@@ -21,7 +21,6 @@ class UzytkownikMeneger
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 
-
 public:
     UzytkownikMeneger(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
     {
