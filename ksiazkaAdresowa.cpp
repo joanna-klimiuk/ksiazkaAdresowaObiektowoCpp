@@ -115,3 +115,20 @@ void KsiazkaAdresowa::edytujAdresata()
     }
 }
 
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+     if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+    {
+        adresatMeneger -> wyszukajAdresatowPoImieniu();
+    }
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+     if (uzytkownikMeneger.czyUzytkownikJestZalogowany())
+    {
+        adresatMeneger -> wyszukajAdresatowPoNazwisku();
+    }
+}
+
+

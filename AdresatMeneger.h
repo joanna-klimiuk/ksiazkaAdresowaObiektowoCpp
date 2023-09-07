@@ -17,10 +17,11 @@ class AdresatMeneger
     void wyswietlDaneAdresata(Adresat adresat);
     int podajIdWybranegoAdresata();
     char wybierzOpcjeZMenuEdycja();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 public:
     AdresatMeneger(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
-        : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+        : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami)
     {
         adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
@@ -28,4 +29,6 @@ public:
     void wyswietlWszystkichAdresatow();
     void usunAdresata();
     void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
